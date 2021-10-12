@@ -22,7 +22,7 @@ public class HostInformation implements InfoContributor {
         try {
 
             Runtime rt = Runtime.getRuntime();
-            Process pr = rt.exec("openssl version");
+            Process pr = rt.exec("openssl version -a");
 
             BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
 
