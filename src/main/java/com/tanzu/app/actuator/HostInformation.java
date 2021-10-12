@@ -18,7 +18,7 @@ public class HostInformation implements InfoContributor {
     @Override
     public void contribute(Info.Builder builder) {
 
-        StringBuilder sb = new StringBuilder("openssl version : ");
+        StringBuilder sb = new StringBuilder();
         try {
 
             Runtime rt = Runtime.getRuntime();
@@ -36,5 +36,7 @@ public class HostInformation implements InfoContributor {
         } catch(Exception e) {
             LOG.warn("An error occurred while retrieving Openssl version", e);
         }
+
+        builder.withDetail("openssl", sb.toString());
     }
 }
