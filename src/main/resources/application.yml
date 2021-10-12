@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: tanzu-app
+  profiles:
+    # Last wins : local, prod
+    active: local
+
+info:
+  app:
+    # Reuse declared variable
+    name: ${spring.application.name}
+    # Retrieve data from pom.xml
+    version: "@project.version@"
+    # Sample for deployment variable configuration
+    hello: hello-${spring.profiles.active}
+
+management:
+  endpoint:
+    health:
+      # Details are only shown to authorized users
+      show-details: always
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
