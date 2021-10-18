@@ -20,6 +20,8 @@ spec:
           resources:
             limits:
               memory: 1Gi
+            requests:
+              ephemeral-storage: "128Mi"
           ports:
             - containerPort: 8080
           livenessProbe:

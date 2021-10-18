@@ -27,9 +27,14 @@ public class HostInformation implements InfoContributor {
             BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
 
             String line;
+            int i = 0;
 
             while((line=input.readLine()) != null) {
-                sb.append(line);
+                // Keep only first 3 lines of output
+                if(i < 3){
+                    sb.append(line).append(" ");
+                }
+                i++;
             }
 
             int exitVal = pr.waitFor();
