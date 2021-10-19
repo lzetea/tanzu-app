@@ -3,20 +3,20 @@ package com.tanzu.app.domain;
 // Use records when available !
 public class Hello {
 
-    private final long id;
+    private Choice a;
 
-    private final String name;
+    private Choice b;
 
-    public Hello(long id, String name) {
-        this.id = id;
-        this.name = name;
+    public Hello(Choice a, Choice b) {
+        this.a = a;
+        this.b = b;
     }
 
-    public long getId() {
-        return id;
+    public Choice getA() {
+        return a;
     }
 
-    public String getName() {
-        return name;
+    public Choice getB() {
+        return b;
     }
 }
