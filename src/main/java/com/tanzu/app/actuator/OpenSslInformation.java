@@ -30,7 +30,7 @@ public class OpenSslInformation implements InfoContributor {
             int i = 0;
 
             while((line=input.readLine()) != null) {
-                // Keep only first 3 lines of output
+                // Keep only the first 3 lines of output
                 if(i < 3){
                     sb.append(line).append(" ");
                 }

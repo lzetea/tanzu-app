@@ -1,2 +1,14 @@
-== Tanzu App
+= Tanzu App
 
+== Build image
+
+=== WSL
+
+[source, sh]
+----
+# Start Docker
+sudo service docker start
+
+# Build image
+./mvnw spring-boot:build-image
+----
