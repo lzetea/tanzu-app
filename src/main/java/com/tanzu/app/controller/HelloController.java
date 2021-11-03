@@ -1,34 +1,36 @@
 package com.tanzu.app.controller;
 
-import com.tanzu.app.domain.Choice;
-import com.tanzu.app.domain.Hello;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
+import com.tanzu.app.domain.Hello;
+import com.tanzu.app.repository.HelloRepository;
 
 @Controller
 public class HelloController {
 
-    private static final Logger LOG = LoggerFactory.getLogger(HelloController.class);
+	private static final Logger LOG = LoggerFactory.getLogger(HelloController.class);
 
-    private final AtomicInteger counter = new AtomicInteger();
-    private final List<Hello> hellos = new ArrayList<>();
+	private HelloRepository helloRepository;
 
-    public HelloController(){
-        hellos.add(new Hello(new Choice("/images/cat.gif", "Cat"), new Choice("/images/dog.gif", "Dog")));
-        hellos.add(new Hello(new Choice("/images/ski.gif", "Ski"), new Choice("/images/snowboard.gif", "Snowboard")));
-        hellos.add(new Hello(new Choice("/images/beach.gif", "Beach"), new Choice("/images/mountain.gif", "Mountain")));
-    }
+	private final AtomicInteger counter = new AtomicInteger();
 
-    @GetMapping("/")
-    public String greeting(Model model) {
-        model.addAttribute("hello", hellos.get(counter.getAndIncrement() % hellos.size()));
-        return "hello";
-    }
+	public HelloController(HelloRepository helloRepository) {
+		this.helloRepository = helloRepository;
+	}
+
+	@GetMapping("/")
+	public String greeting(Model model) {
+		LOG.debug("Looking for hellos");
+		List<Hello> hellos = helloRepository.findAllEagered();
+		model.addAttribute("hello", hellos.get(counter.getAndIncrement() % hellos.size()));
+		return "hello";
+	}
+
 }

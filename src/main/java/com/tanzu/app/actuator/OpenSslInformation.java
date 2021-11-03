@@ -1,47 +1,44 @@
 package com.tanzu.app.actuator;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.actuate.info.Info;
 import org.springframework.boot.actuate.info.InfoContributor;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import com.tanzu.app.utils.ProcessLauncher;
 
 // https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-application-info-custom
 @Component
 public class OpenSslInformation implements InfoContributor {
 
-    private static final Logger LOG = LoggerFactory.getLogger(OpenSslInformation.class);
+	private static final Logger LOG = LoggerFactory.getLogger(OpenSslInformation.class);
 
-    @Override
-    public void contribute(Info.Builder builder) {
+	@Override
+	public void contribute(Info.Builder builder) {
 
-        StringBuilder sb = new StringBuilder();
-        try {
+		StringBuilder result = new StringBuilder();
+		try (ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
 
-            Runtime rt = Runtime.getRuntime();
-            Process pr = rt.exec("openssl version -a");
+			ProcessLauncher processLauncher = new ProcessLauncher(bos);
+			processLauncher.exec("openssl version -a");
 
-            BufferedReader input = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+			String output = bos.toString(StandardCharsets.UTF_8);
+			if (null != result) {
+				String[] parts = output.split("\n", 4);
+				if (parts.length > 2) {
+					result.append(parts[0]).append(" - ").append(parts[1]);
+				}
+			}
 
-            String line;
-            int i = 0;
+		} catch (IOException e) {
+			LOG.warn("An error occurred while retrieving Openssl version", e);
+		}
 
-            while((line=input.readLine()) != null) {
-                // Keep only the first 3 lines of output
-                if(i < 3){
-                    sb.append(line).append(" ");
-                }
-                i++;
-            }
-
-            int exitVal = pr.waitFor();
-        } catch(Exception e) {
-            LOG.warn("An error occurred while retrieving Openssl version", e);
-        }
-
-        builder.withDetail("openssl", sb.toString());
-    }
+		builder.withDetail("openssl", result.toString());
+	}
 }

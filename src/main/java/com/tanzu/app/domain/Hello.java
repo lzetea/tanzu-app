@@ -1,22 +1,29 @@
 package com.tanzu.app.domain;
 
-// Use records when available !
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Hello {
 
-    private Choice a;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    private Choice b;
+	@ManyToOne
+	private Choice a;
 
-    public Hello(Choice a, Choice b) {
-        this.a = a;
-        this.b = b;
-    }
+	@ManyToOne
+	private Choice b;
 
-    public Choice getA() {
-        return a;
-    }
+	public Choice getA() {
+		return a;
+	}
 
-    public Choice getB() {
-        return b;
-    }
+	public Choice getB() {
+		return b;
+	}
 }

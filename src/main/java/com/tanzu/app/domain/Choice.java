@@ -1,22 +1,43 @@
 package com.tanzu.app.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Choice {
 
-    private final String url;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    private final String name;
+	private String url;
 
+	private String name;
 
-    public Choice(String url, String name) {
-        this.url = url;
-        this.name = name;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }

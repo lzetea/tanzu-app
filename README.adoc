@@ -1,14 +1,17 @@
 = Tanzu App
 
-== Build image
-
-=== WSL
+== Launch
 
 [source, sh]
 ----
-# Start Docker
-sudo service docker start
+# Run app
+./mvnw spring-boot:run
 
 # Build image
 ./mvnw spring-boot:build-image
 ----
+
+== Access
+
+* http://localhost:8080
+* http://localhost:8080/h2-console

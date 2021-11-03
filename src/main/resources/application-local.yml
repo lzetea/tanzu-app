@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password: 
+    driverClassName: org.h2.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialectspring
+  h2:
+    console.enabled: true
+
+logging:
+  level:
+    com:
+      tanzu:
+        app: DEBUG

@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://HOST:PORT/tanzu-app
+    username: tanzu-app
+    password: tanzu-app
+    driverClassName: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    spring.jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect

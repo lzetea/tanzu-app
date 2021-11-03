@@ -4,6 +4,11 @@ spring:
   profiles:
     # Last wins : local, prod
     active: local
+  sql:
+    init:
+      mode: always
+  jpa:
+    open-in-view: false
 
 info:
   app:

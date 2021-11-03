@@ -13,17 +13,17 @@ import java.net.UnknownHostException;
 @Component
 public class HostInformation implements InfoContributor {
 
-    private static final Logger LOG = LoggerFactory.getLogger(HostInformation.class);
+	private static final Logger LOG = LoggerFactory.getLogger(HostInformation.class);
 
-    @Override
-    public void contribute(Info.Builder builder) {
+	@Override
+	public void contribute(Info.Builder builder) {
 
-        String host = "Unknown";
-        try {
-            host = InetAddress.getLocalHost().getHostAddress();
-        } catch (UnknownHostException e) {
-            LOG.warn("Cannot access to the host address", e);
-        }
-        builder.withDetail("host", host);
-    }
+		String host = "Unknown";
+		try {
+			host = InetAddress.getLocalHost().getHostAddress();
+		} catch (UnknownHostException e) {
+			LOG.warn("Cannot access to the host address", e);
+		}
+		builder.withDetail("host", host);
+	}
 }
