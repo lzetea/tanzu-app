@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
+  name: tanzu-app
   namespace: tanzu-app
   annotations:
     keel.sh/policy: force
