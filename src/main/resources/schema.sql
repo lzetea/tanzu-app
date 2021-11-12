@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS hello;
+DROP TABLE IF EXISTS choice;
+
 create table choice (id bigint not null, name varchar(255), url varchar(255), primary key (id));
 create table hello (id bigint not null, a_id bigint, b_id bigint, primary key (id));
 
