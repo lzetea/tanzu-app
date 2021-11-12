@@ -4,5 +4,5 @@ metadata:
   name: tanzu-app
   namespace: tanzu-app
 data:
-  datasource-url: jdbc:postgresql://HOST:PORT/tanzu-app
+  datasource-url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/tanzu-app
   wavefront-url: https://vmware.wavefront.com

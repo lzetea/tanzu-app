@@ -4,6 +4,10 @@ kind: Deployment
 metadata:
   name: app
   namespace: tanzu-app
+  annotations:
+    keel.sh/policy: force
+    keel.sh/trigger: poll      
+    keel.sh/pollSchedule: "@every 1m"
 spec:
   replicas: 1
   selector:
@@ -15,7 +19,7 @@ spec:
         app: tanzu-app
     spec:
       containers:
-        - image: harbor.cpod-devready.az-fkd.cloud-garage.net/tls/tanzu-app@sha256:cb75fbaa2e2ed03d6bb63c592aeceb1149ee31bf1ed2d890c3bc24d269f683f3
+        - image: harbor.withtanzu.com/fmartin/tanzu-app:latest
           name: app
           resources:
             limits:
