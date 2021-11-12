@@ -49,11 +49,13 @@ public class ProcessLauncher {
 	}
 
 	/**
-	 * @param out Outputstream vers lequel sera redirige la sortie standard de
-	 *            l'application externe (null pour ne pas rediriger).
+	 * @param out     Outputstream vers lequel sera redirige la sortie standard de
+	 *                l'application externe (null pour ne pas rediriger).
+	 * @param timeout temps en millisecondes avant de forcer l'arret de
+	 *                l'application externe (0 pour ne jamais forcer l'arret).
 	 */
-	public ProcessLauncher(OutputStream out) {
-		this(out, null, null, 0L);
+	public ProcessLauncher(OutputStream out, long timeout) {
+		this(out, null, null, timeout);
 	}
 
 	/**

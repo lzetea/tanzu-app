@@ -24,7 +24,7 @@ public class OpenSslInformation implements InfoContributor {
 		StringBuilder result = new StringBuilder();
 		try (ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
 
-			ProcessLauncher processLauncher = new ProcessLauncher(bos);
+			ProcessLauncher processLauncher = new ProcessLauncher(bos, 5000);
 			processLauncher.exec("openssl version -a");
 
 			String output = bos.toString(StandardCharsets.UTF_8);
