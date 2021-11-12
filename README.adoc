@@ -1,5 +1,12 @@
 = Tanzu App
 
+== Prerequisites
+
+
+Weavefront account
+* https://wavefront.surf
+
+
 == Launch
 
 [source, sh]
@@ -15,3 +22,14 @@
 
 * http://localhost:8080
 * http://localhost:8080/h2-console
+
+== TODO
+
+https://github.com/alexandreroman/k8s-todo-app/tree/main/config
+
+https://artifacthub.io/packages/helm/bitnami/kubeapps/7.3.2
+=> Dernière version 2.3
+helm install kubeapps --namespace kubeapps bitnami/kubeapps --version 7.3.2
+
+Kubeapps
+Keel.sh

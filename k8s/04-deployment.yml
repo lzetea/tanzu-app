@@ -1,0 +1,68 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  namespace: tanzu-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tanzu-app
+  template:
+    metadata:
+      labels:
+        app: tanzu-app
+    spec:
+      containers:
+        - image: harbor.cpod-devready.az-fkd.cloud-garage.net/tls/tanzu-app@sha256:cb75fbaa2e2ed03d6bb63c592aeceb1149ee31bf1ed2d890c3bc24d269f683f3
+          name: app
+          resources:
+            limits:
+              memory: 1Gi
+            requests:
+              cpu: "0.25"
+              memory: 512Mi
+              ephemeral-storage: "128Mi"
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health/liveness
+            initialDelaySeconds: 60
+            periodSeconds: 2
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health/readiness
+            initialDelaySeconds: 10
+          # https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config.typesafe-configuration-properties.relaxed-binding.environment-variables
+          env:
+          - name: SPRING_PROFILES_ACTIVE
+            value: "prod"
+          - name: SPRING_DATASOURCE_URL
+            valueFrom:
+              configMapKeyRef:
+                name: tanzu-app
+                key: datasource-url
+          - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
+            valueFrom:
+              configMapKeyRef:
+                name: tanzu-app
+                key: wavefront-url
+          - name: SPRING_DATASOURCE_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: tanzu-app
+                key: datasource-username
+          - name: SPRING_DATASOURCE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: tanzu-app
+                key: datasource-password
+          - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_APITOKEN
+            valueFrom:
+              secretKeyRef:
+                name: tanzu-app
+                key: wavefront-api-token
