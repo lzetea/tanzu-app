@@ -28,10 +28,12 @@ public class OpenSslInformation implements InfoContributor {
 			processLauncher.exec("openssl version -a");
 
 			String output = bos.toString(StandardCharsets.UTF_8);
-			if (null != result) {
+			if (null != output) {
 				String[] parts = output.split("\n", 4);
 				if (parts.length > 2) {
 					result.append(parts[0]).append(" - ").append(parts[1]);
+				} else {
+					LOG.warn("Bad result from openssl command {}", output);
 				}
 			}
 
