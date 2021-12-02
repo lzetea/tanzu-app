@@ -1,0 +1,14 @@
+apiVersion: kpack.io/v1alpha1
+kind: Image
+metadata:
+  name: tanzu-app-image
+  namespace: tanzu-app
+spec:
+  tag: 1harbor.mytanzu.xyz/lze-dev/tanzu-app
+  serviceAccount: tanzu-app-service-account
+  builder:
+    name: default-builder
+    kind: Builder
+  source:
+    git:
+      url: https://github.com/lzetea/tanzu-app

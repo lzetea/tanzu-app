@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tanzu-app-service-account
+  namespace: tanzu-app
+secrets:
+- name: harbor-creds
+imagePullSecrets:
+- name: harbor-creds

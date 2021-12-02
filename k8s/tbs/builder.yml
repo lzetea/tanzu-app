@@ -1,0 +1,17 @@
+apiVersion: kpack.io/v1alpha1
+kind: Builder
+metadata:
+  name: default-builder
+  namespace: tanzu-app
+spec:
+  serviceAccount: tanzu-app-service-account
+  tag: harbor.mytanzu.xyz/lze-dev/builder
+  stack:
+    name: base
+    kind: ClusterStack
+  store:
+    name: default
+    kind: ClusterStore
+  order:
+  - group:
+    - id: tanzu-buildpacks/java
