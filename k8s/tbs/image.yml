@@ -1,7 +1,7 @@
 apiVersion: kpack.io/v1alpha1
 kind: Image
 metadata:
-  name: tanzu-app-image
+  name: tanzu-app
   namespace: tanzu-app
 spec:
   tag: harbor.mytanzu.xyz/lze-dev/tanzu-app
@@ -12,3 +12,4 @@ spec:
   source:
     git:
       url: https://github.com/lzetea/tanzu-app
+      revision: main
