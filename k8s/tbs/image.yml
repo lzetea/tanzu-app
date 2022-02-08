@@ -4,7 +4,7 @@ metadata:
   name: tanzu-app
   namespace: tanzu-app
 spec:
-  tag: harbor.mytanzu.xyz/lze-dev/tanzu-app
+  tag: harbor.withtanzu.com/lzetea/tanzu-app
   serviceAccount: tanzu-app-service-account
   builder:
     name: default-builder

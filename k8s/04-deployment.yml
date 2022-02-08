@@ -19,7 +19,7 @@ spec:
         app: tanzu-app
     spec:
       containers:
-        - image: harbor.mytanzu.xyz/lze-dev/tanzu-app:latest
+        - image: harbor.withtanzu.com/lzetea/tanzu-app:latest
           name: app
           resources:
             limits:

@@ -5,7 +5,7 @@ metadata:
   namespace: tanzu-app
 spec:
   serviceAccount: tanzu-app-service-account
-  tag: harbor.mytanzu.xyz/lze-dev/builder
+  tag: harbor.withtanzu.com/lzetea/builder
   stack:
     name: base
     kind: ClusterStack
