@@ -5,4 +5,4 @@ metadata:
   namespace: tanzu-app
 data:
   datasource-url: jdbc:postgresql://10.212.191.108:5432/postgres
-  wavefront-url: proxy://100.67.116.170:2878
+  wavefront-url: https://vmware.wavefront.com
