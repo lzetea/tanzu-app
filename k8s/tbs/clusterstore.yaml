@@ -1,0 +1,2683 @@
+apiVersion: kpack.io/v1alpha2
+kind: ClusterStore
+metadata:
+  name: custom-clusterstore
+  namespace: tanzu-app
+spec:
+  sources:
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:baf55402599aab20c52d1c819a9a63b0c6e861e18599b23b91d1871fc11b5d25
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:fc02c0f92a5e8ae0c56c53f11f7b7836d7825a53e09432a9855c151055087912
+  - image: harbor.withtanzu.com/lzetea/tbs@sha256:99cb5ad1360641204edbdcc8d0055595b3026a1a4d9b843d2377b77d40f040f5
+status:
+  buildpacks:
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:e445abb433fbe7f2e206586e69614167c62688a48fbfe78e37a21b0ede639e89
+    digest: sha256:dce79ec533fafa29877f996dde6c3fdede23c67ebdf13af26a169dddd4b140cd
+    homepage: https://github.com/paketo-buildpacks/apache-tomcat
+    id: paketo-buildpacks/apache-tomcat
+    size: 37505343
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 6.4.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:2b73b5fdccdde0cd1a77f5191aa7dfa7a0c67340c95f4c410fe12376b47adf19
+    digest: sha256:af32cd31387fb90048a3cb0bb940a840cfc5e6d7ae4f6d959779aec61380e6d1
+    homepage: https://github.com/paketo-buildpacks/azure-application-insights
+    id: paketo-buildpacks/azure-application-insights
+    size: 33326289
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.10.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:4ccc7c5b03a36a61174d544572846fa9c4a916f33a8bc69171757169ce6989d6
+    digest: sha256:dfb9d13d44260347ebdad550d8204c5a95ca9e9cd016d59e380c3a9cbeb51605
+    homepage: https://github.com/paketo-buildpacks/bellsoft-liberica
+    id: paketo-buildpacks/bellsoft-liberica
+    size: 1174083009
+    stacks:
+    - id: io.paketo.stacks.tiny
+    - id: io.buildpacks.stacks.bionic
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 8.9.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:60b8714a6a3c4710b282c6a4e7236272497fd6c3a6fd39a3b9e896ea1246b376
+    digest: sha256:e6ecc16b2db7817182f948670886e23b5a8e3295a0727305cfd5ff3e94a5a0db
+    homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    size: 3448204
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 2.4.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:60b8714a6a3c4710b282c6a4e7236272497fd6c3a6fd39a3b9e896ea1246b376
+    digest: sha256:e6ecc16b2db7817182f948670886e23b5a8e3295a0727305cfd5ff3e94a5a0db
+    homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    size: 3448204
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 2.4.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:232a94724926bd444c821f9021e83c4e096ea24fc6d73df717539987c8cccb74
+    digest: sha256:28273bae8e79a63b86d5745cac22b6aa6758ab751726178e7aaade9e9ceed9c6
+    homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    size: 3153594
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 3.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:f16b324ceceb403b2e7ebed70728750cccfe98fcc2db92d538422ac2372fb8c5
+    digest: sha256:c733fc54b3f4704111a046ca1e55013143dbe4f89a28f3b9914e5200fbb34ea8
+    homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    size: 3153602
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 3.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:f16b324ceceb403b2e7ebed70728750cccfe98fcc2db92d538422ac2372fb8c5
+    digest: sha256:c733fc54b3f4704111a046ca1e55013143dbe4f89a28f3b9914e5200fbb34ea8
+    homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    size: 3153602
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 3.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:f16b324ceceb403b2e7ebed70728750cccfe98fcc2db92d538422ac2372fb8c5
+    digest: sha256:c733fc54b3f4704111a046ca1e55013143dbe4f89a28f3b9914e5200fbb34ea8
+    homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    size: 3153602
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 3.0.2
+  - api: "0.7"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:f16b324ceceb403b2e7ebed70728750cccfe98fcc2db92d538422ac2372fb8c5
+    digest: sha256:c733fc54b3f4704111a046ca1e55013143dbe4f89a28f3b9914e5200fbb34ea8
+    homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    size: 3153602
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 3.0.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:6f3390f46f2e2b110f13f27b647dd42f07a061b11e5dcb84ba3776f7c61b5312
+    digest: sha256:b8e3c10c86662f70b80a367ccd903cb62d6d7e21c5061629f1d64fb8ad7ab180
+    homepage: https://github.com/paketo-buildpacks/clojure-tools
+    id: paketo-buildpacks/clojure-tools
+    size: 2692734
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 1.1.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:4fc5e4d945954b377513c5917d2e9b4ebd6d714bd326a048d0e88a39085a41e1
+    digest: sha256:b98501eb09559acc78afe8f8040d5034357922fd985c943d39947d8889177ebb
+    homepage: https://github.com/paketo-buildpacks/dist-zip
+    id: paketo-buildpacks/dist-zip
+    size: 1614321
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.3.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:9dc024755d6f0635361dc27da6c1233a5c2c4a0f6a59e1860c13a04d745d76ba
+    digest: sha256:3355e480f31dc29a0712e7f41b6a742ae6b761c21efd56ba7770fad36522cd19
+    homepage: https://github.com/paketo-buildpacks/encrypt-at-rest
+    id: paketo-buildpacks/encrypt-at-rest
+    size: 2896004
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.2.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:9d6b3ad412e71a15668875c6823fa0bce0fecf3778368f935186fb5845b34fe6
+    digest: sha256:c05a63d9e88de9dd6641b711855d977208f20c9a868538aa93c0b90a1e38d1e6
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1698867
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 3.2.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:9d6b3ad412e71a15668875c6823fa0bce0fecf3778368f935186fb5845b34fe6
+    digest: sha256:c05a63d9e88de9dd6641b711855d977208f20c9a868538aa93c0b90a1e38d1e6
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1698867
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.2.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:8b21cfe515dcc9cd5a896f4dd5bead81130fde76e78890d5e9cd83329ecdfb7b
+    digest: sha256:8c7307fc80f178007d0f94964422b8a14adf5b18946e7ae26aa2e084fc9ef667
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1527352
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.0.1
+  - api: "0.7"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:8b21cfe515dcc9cd5a896f4dd5bead81130fde76e78890d5e9cd83329ecdfb7b
+    digest: sha256:8c7307fc80f178007d0f94964422b8a14adf5b18946e7ae26aa2e084fc9ef667
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1527352
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 4.0.1
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:68db658e07698e1758a32dc302631230cd6be6716e20fec6ec33da1db232b2d2
+    digest: sha256:5ed348413592820b5611d3900278b3c4d8abeb5d873956ad7ce2d8812f310f97
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1521181
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:d2216d457a9854c5600a3a7b90e7a1bedef327b01c47bf2a639c429b588ed3bd
+    digest: sha256:6bc0b3f5cd379671728083c40e18fb13be5e93f0ad6aeb7117406232266a6349
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1521173
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:d2216d457a9854c5600a3a7b90e7a1bedef327b01c47bf2a639c429b588ed3bd
+    digest: sha256:6bc0b3f5cd379671728083c40e18fb13be5e93f0ad6aeb7117406232266a6349
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1521173
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 4.0.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:7556b5682a6c462fb253afc34e520fd872a81cef3c59c521b94cd3999800f33e
+    digest: sha256:08ff6dba23ec058c34efd3e65dff712c35cb96c23b363471d3700ea846a2ee9e
+    homepage: https://github.com/paketo-buildpacks/executable-jar
+    id: paketo-buildpacks/executable-jar
+    size: 1833438
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 5.3.1
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:7556b5682a6c462fb253afc34e520fd872a81cef3c59c521b94cd3999800f33e
+    digest: sha256:08ff6dba23ec058c34efd3e65dff712c35cb96c23b363471d3700ea846a2ee9e
+    homepage: https://github.com/paketo-buildpacks/executable-jar
+    id: paketo-buildpacks/executable-jar
+    size: 1833438
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 5.3.1
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:01814fb5002b9ff01e70559b8ae78bf823bc39ced6ba3ba2c18d9d8e245107cd
+    digest: sha256:287994dac45a8217f52a0478d9e596c72b2b83289bbffc7457aa342880045cdb
+    homepage: https://github.com/paketo-buildpacks/google-stackdriver
+    id: paketo-buildpacks/google-stackdriver
+    size: 11415793
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.0.1
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:e8675bb82e3ec52995957bc21ce20cdb560b99e1e753ed1b3b6d2837e3a6bc8c
+    digest: sha256:9e2dbf4eec783db64cf8f25acde86dade731a371c201ea214994fa3f78c5efb2
+    homepage: https://github.com/paketo-buildpacks/graalvm
+    id: paketo-buildpacks/graalvm
+    size: 1173956030
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 6.7.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:4406314b3fb6f1747d6fc7b30b2f72b6b473009e2b8e203743e64b0d0880e9be
+    digest: sha256:bd8b8e4e5b40aa4b76ff6976e64f286c539e0fabcd565f1559247bcea8e0e560
+    homepage: https://github.com/paketo-buildpacks/gradle
+    id: paketo-buildpacks/gradle
+    size: 118486252
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 5.8.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:4406314b3fb6f1747d6fc7b30b2f72b6b473009e2b8e203743e64b0d0880e9be
+    digest: sha256:bd8b8e4e5b40aa4b76ff6976e64f286c539e0fabcd565f1559247bcea8e0e560
+    homepage: https://github.com/paketo-buildpacks/gradle
+    id: paketo-buildpacks/gradle
+    size: 118486252
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 5.8.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:9214327fc3c3fd71cea16a141788a3ee52821991f7d1f44021509e8fb7afdd0a
+    digest: sha256:a64277e4814d76b59b96b4af3ffb86d6119789ffc5f1f443fe75be75098c31f3
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1614825
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 3.2.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:9214327fc3c3fd71cea16a141788a3ee52821991f7d1f44021509e8fb7afdd0a
+    digest: sha256:a64277e4814d76b59b96b4af3ffb86d6119789ffc5f1f443fe75be75098c31f3
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1614825
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.2.3
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:2a68786203a5393ee26a719bb4be2daefd40f69885dd5fdab44fe3af0bf8bc92
+    digest: sha256:42cbadba482f96a64b873be9111b0c9a72d1d72b75e5a22f4f6f6ec56f273a36
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1452478
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:d835f5ed23c897c57bcb4801f4a215228910b7ed36ab5f1868e90a3ff4b7592c
+    digest: sha256:82c30a41f62b407ce5b92a76c7616805cd64a0116108ef1a8163cb769f291d7b
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1452490
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:d835f5ed23c897c57bcb4801f4a215228910b7ed36ab5f1868e90a3ff4b7592c
+    digest: sha256:82c30a41f62b407ce5b92a76c7616805cd64a0116108ef1a8163cb769f291d7b
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1452490
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:d835f5ed23c897c57bcb4801f4a215228910b7ed36ab5f1868e90a3ff4b7592c
+    digest: sha256:82c30a41f62b407ce5b92a76c7616805cd64a0116108ef1a8163cb769f291d7b
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1452490
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:d835f5ed23c897c57bcb4801f4a215228910b7ed36ab5f1868e90a3ff4b7592c
+    digest: sha256:82c30a41f62b407ce5b92a76c7616805cd64a0116108ef1a8163cb769f291d7b
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1452490
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 4.0.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:75c0d79bfd7b3293bb26a94ed7b21ff6f4729ccf4d51c637849d361b7feda94b
+    digest: sha256:3d91418c2ec78f2e9a15a9ae93a41f197629694e64b5392e91e12e5061c34182
+    homepage: https://github.com/paketo-buildpacks/leiningen
+    id: paketo-buildpacks/leiningen
+    size: 2705328
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 3.5.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:75c0d79bfd7b3293bb26a94ed7b21ff6f4729ccf4d51c637849d361b7feda94b
+    digest: sha256:3d91418c2ec78f2e9a15a9ae93a41f197629694e64b5392e91e12e5061c34182
+    homepage: https://github.com/paketo-buildpacks/leiningen
+    id: paketo-buildpacks/leiningen
+    size: 2705328
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.5.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:ace416b2acdeb984ec05068e0cdfb6b1b096dd7e429b7176e27d1bf3917b1d3a
+    digest: sha256:f35a74592a8fbc03104ea9d491942108134c56861f7ec34e3839f984ab61331c
+    homepage: https://github.com/paketo-buildpacks/maven
+    id: paketo-buildpacks/maven
+    size: 11790025
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 5.7.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:ace416b2acdeb984ec05068e0cdfb6b1b096dd7e429b7176e27d1bf3917b1d3a
+    digest: sha256:f35a74592a8fbc03104ea9d491942108134c56861f7ec34e3839f984ab61331c
+    homepage: https://github.com/paketo-buildpacks/maven
+    id: paketo-buildpacks/maven
+    size: 11790025
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 5.7.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:7b6bcbafe7769367ccdd86591d75b81ae8986b13ace1fbad2ddef3f8e0867ba6
+    digest: sha256:0fd7896246a472adfa494d2e079b887684ff467fc2f744f5f9b7c059484bf145
+    homepage: https://github.com/paketo-buildpacks/native-image
+    id: paketo-buildpacks/native-image
+    size: 1884977
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 4.3.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:5221d8fbffe0bf1d7cfba9a2f93a581fd68dd1c4b653b276d2d71afb3a7ba190
+    digest: sha256:a06789e5418d24d2218fd49f72b0811ce8c937909b6cc84b3956b532c712ec75
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 3378986
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    - id: io.buildpacks.stacks.windows.servercore
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 4.4.1
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:5221d8fbffe0bf1d7cfba9a2f93a581fd68dd1c4b653b276d2d71afb3a7ba190
+    digest: sha256:a06789e5418d24d2218fd49f72b0811ce8c937909b6cc84b3956b532c712ec75
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 3378986
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    - id: io.buildpacks.stacks.windows.servercore
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.4.1
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/paketo-buildpacks/procfile
+      id: paketo-buildpacks/procfile
+      version: 4.4.1
+    diffId: sha256:5221d8fbffe0bf1d7cfba9a2f93a581fd68dd1c4b653b276d2d71afb3a7ba190
+    digest: sha256:a06789e5418d24d2218fd49f72b0811ce8c937909b6cc84b3956b532c712ec75
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 3378986
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    - id: io.buildpacks.stacks.windows.servercore
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:baf55402599aab20c52d1c819a9a63b0c6e861e18599b23b91d1871fc11b5d25
+    version: 4.4.1
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:8a60fec552fb63feb339fce7bef26b0b849360cc0746635749c9cddf87f73358
+    digest: sha256:cb9726d452ce9ad08b1fe56e5a98bb8a2079b31acbfac42a11657c462bb1f791
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 3028737
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    - id: io.buildpacks.stacks.windows.servercore
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 5.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:72f85f6abc372e1a624a246a862c41ad6dc7336e9b11bc574ff3b16277c23419
+    digest: sha256:313ed9850d195d8fbfde2987953a3ccce8e7487d0796002326ebde832efed709
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 3029240
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    - id: io.buildpacks.stacks.windows.servercore
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 5.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:72f85f6abc372e1a624a246a862c41ad6dc7336e9b11bc574ff3b16277c23419
+    digest: sha256:313ed9850d195d8fbfde2987953a3ccce8e7487d0796002326ebde832efed709
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 3029240
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    - id: io.buildpacks.stacks.windows.servercore
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 5.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:72f85f6abc372e1a624a246a862c41ad6dc7336e9b11bc574ff3b16277c23419
+    digest: sha256:313ed9850d195d8fbfde2987953a3ccce8e7487d0796002326ebde832efed709
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 3029240
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    - id: io.buildpacks.stacks.windows.servercore
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 5.0.2
+  - api: "0.7"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:72f85f6abc372e1a624a246a862c41ad6dc7336e9b11bc574ff3b16277c23419
+    digest: sha256:313ed9850d195d8fbfde2987953a3ccce8e7487d0796002326ebde832efed709
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 3029240
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    - id: io.buildpacks.stacks.windows.servercore
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 5.0.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:ed15a304bcf92aa05dff3a84039b7c38c2d38f7fbefa2a490f6793e0a9e8c8e9
+    digest: sha256:87f40004db846e054f5fdda81f3a38c63256e99bf920ef63be3d034bd286ff88
+    homepage: https://github.com/paketo-buildpacks/sbt
+    id: paketo-buildpacks/sbt
+    size: 22712317
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 5.6.0
+  - api: "0.7"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:1cd99468b2edbaa9888ea895ec1643606626b75962a0e81499cc4d37833d557e
+    digest: sha256:4ff142c9cde3f83e85d854ee0dd50391ae9cba7d79688f84f2368035440585c4
+    homepage: https://github.com/paketo-buildpacks/sbt
+    id: paketo-buildpacks/sbt
+    size: 22512250
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 6.0.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:f06ff31cb1c1b4f7e9b6fd6fefa81a8f31984c46b888c510b971c23b05ddc7aa
+    digest: sha256:c97350fc7a9c6bcfa1aa33b69461e01103d52cee5a8ef22f5f3ac00d6c5bb914
+    homepage: https://github.com/paketo-buildpacks/spring-boot
+    id: paketo-buildpacks/spring-boot
+    size: 3684462
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 4.7.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:f06ff31cb1c1b4f7e9b6fd6fefa81a8f31984c46b888c510b971c23b05ddc7aa
+    digest: sha256:c97350fc7a9c6bcfa1aa33b69461e01103d52cee5a8ef22f5f3ac00d6c5bb914
+    homepage: https://github.com/paketo-buildpacks/spring-boot
+    id: paketo-buildpacks/spring-boot
+    size: 3684462
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.7.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:063e547c1fab2f488f71c1ffc243d18d90620f0c3d954b510405de6cb172bcb6
+    digest: sha256:003f5c85a525eb2f14b897100deb50c94567f70016b387804d276ebc789ea1e6
+    homepage: https://github.com/paketo-buildpacks/upx
+    id: paketo-buildpacks/upx
+    size: 3129585
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 1.1.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:02a774e31e1a036d4a82bcd007586702c3abb8bd9eee108e265b831f7261fe6e
+    digest: sha256:4e69b08ce95cb4fdc187760249d4d878b6b16e2505d8f789180ee4fd19f1baa0
+    homepage: https://github.com/paketo-buildpacks/watchexec
+    id: paketo-buildpacks/watchexec
+    size: 3562925
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 1.2.0
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:f7a0d7a843ddc23d6e2b739b14354cfa65f645cf975721e1d536e02ec59351f4
+    digest: sha256:81b9bff5d005ea9672b0b3ce3e33374290f3bbddab273db36f759140d0304f23
+    homepage: https://github.com/paketo-buildpacks/watchexec
+    id: paketo-buildpacks/watchexec
+    size: 3345153
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 2.0.2
+  - api: "0.7"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:f7a0d7a843ddc23d6e2b739b14354cfa65f645cf975721e1d536e02ec59351f4
+    digest: sha256:81b9bff5d005ea9672b0b3ce3e33374290f3bbddab273db36f759140d0304f23
+    homepage: https://github.com/paketo-buildpacks/watchexec
+    id: paketo-buildpacks/watchexec
+    size: 3345153
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 2.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:7573c4c16cae5ea4c4bdb3d7446856a35863de94c196d6cd218e7010d1766ee6
+    digest: sha256:623d320aaa341701cfcd77abf3e1134346fa4a2a49220764e38f3c62721c289f
+    homepage: https://github.com/paketo-buildpacks/watchexec
+    id: paketo-buildpacks/watchexec
+    size: 10470482
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 2.1.0
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:7573c4c16cae5ea4c4bdb3d7446856a35863de94c196d6cd218e7010d1766ee6
+    digest: sha256:623d320aaa341701cfcd77abf3e1134346fa4a2a49220764e38f3c62721c289f
+    homepage: https://github.com/paketo-buildpacks/watchexec
+    id: paketo-buildpacks/watchexec
+    size: 10470482
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 2.1.0
+  - api: "0.7"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:e7900cef56f918a1ade5389648667c3633823fb753a785e267c31e1964545085
+    digest: sha256:38488a718fdc332c6d1e62f24a4d1a647bcf967babf83fd4fecd0f57d06f3c87
+    homepage: https://github.com/pivotal-cf/tanzu-apache-skywalking
+    id: tanzu-buildpacks/apache-skywalking
+    size: 141832931
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.1.1
+  - api: "0.7"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:cbdeae4ad3bc2447643dbf54889b57f5207abf063c4c319153450f2b5c78d568
+    digest: sha256:f345fe4945fa54aaf518dde736274c230d37708bec9a4970c3c98337124b7e9d
+    homepage: https://github.com/pivotal-cf/tanzu-appdynamics
+    id: tanzu-buildpacks/appdynamics
+    size: 139521077
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.1.3
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:bb8133675aaef6f13f44933c979edb62552d11456b47f5043b496318df451d25
+    digest: sha256:1ed7a028b16a9b0b12da6043e0222a79e11c63930bbd377538ce1b629fd8cf60
+    homepage: https://github.com/pivotal-cf/tanzu-appdynamics
+    id: tanzu-buildpacks/appdynamics
+    size: 139514815
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.1.4
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:2fc1a5e2696784d4331bdb4e635a0df2c0451ef1b77e101904432f2d099251de
+    digest: sha256:3b339ed65701e34d21e33e6e2316e9815351d05920b2720740e8b9bb7e61244d
+    homepage: https://github.com/pivotal-cf/tanzu-appdynamics
+    id: tanzu-buildpacks/appdynamics
+    size: 139527306
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 4.2.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:6b4c5d9bebb6759da932861984619d9638d18055ba87c05192e9ab2ee0ff571d
+    digest: sha256:a957a3e6fea547fd4e9fca95b2765a3fa9a79cd1e1e5408348974ebada8b588b
+    homepage: https://github.com/pivotal-cf/tanzu-aspectj
+    id: tanzu-buildpacks/aspectj
+    size: 1710424
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.2.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:2d5b81fb3dc13304bb0a20bf5b68fbced919da233a16200fb36d0cf9c049e014
+    digest: sha256:1ec982208d2153d95bc61cb644f45a228facb0b1e13687bb2880711f298d3af2
+    homepage: https://github.com/pivotal-cf/tanzu-checkmarx
+    id: tanzu-buildpacks/checkmarx
+    size: 3357382
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.2.2
+  - api: "0.5"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:06e8b884c615737dbbadf71e6c874089e7aa49633a1bab7e888d1869c19e7e7b
+    digest: sha256:fa51f15edc7462ab1937ba421a96d0ac57fb4ab1ffe96870884c384240c262a8
+    homepage: https://github.com/pivotal-cf/tanzu-conda-env-update
+    id: tanzu-buildpacks/conda-env-update
+    size: 2099725
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 0.1.4
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:8500e1ed94734331a717f7018f564f04618413bbbee3368872613e7da6db0796
+    digest: sha256:59d008d9fcdcba151fe5f9d514cc47c97633d117c4b5f13c2b0fe3bb870cbb98
+    homepage: https://github.com/pivotal-cf/tanzu-contrast-security
+    id: tanzu-buildpacks/contrast-security
+    size: 13482758
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.14.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:2def9254494583320417ae2665db75cf671ae6c418190b5677cfdf8364a5c9d7
+    digest: sha256:993d6c4145a8bbe6d0a6e397d908d8dd3fb78622a9273b20a702a823d089567a
+    homepage: https://github.com/pivotal-cf/tanzu-contrast-security
+    id: tanzu-buildpacks/contrast-security
+    size: 12609080
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.1.1
+  - api: "0.6"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:6daa173026fe7a8650bda5f46f0844d626c2e9799bdec5e7e1a342078816b0a1
+    digest: sha256:148c84e43ba67dae5d5de94ce6131b36199250ccee5ec59e1f744cbd53c67c00
+    homepage: https://github.com/pivotal-cf/tanzu-cpython
+    id: tanzu-buildpacks/cpython
+    size: 448550933
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 0.2.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:25897eda1094b5eeab0159228c1f38900c56948ac3e41800aebbda759c2f4127
+    digest: sha256:39d5995095b4fb994a4bf003bf7efe676ccf3de8a21d359325f8671a0cbb28f1
+    id: tanzu-buildpacks/dep-ensure
+    size: 2111728
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 0.1.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:d0c4051e6f7637f60bd16bec908dca5ef951f6746d9e630187da32667f388ae2
+    digest: sha256:92b0c3e74d9b7bf501b79b5e3472c81419b49cb2267a8d6c56eaf50d8daafdc2
+    id: tanzu-buildpacks/dep
+    size: 10500875
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.paketo.stacks.tiny
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 0.1.4
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:78f8314f6a6d0f3b810b8440697342ebed1ef3c69c08f984e9fd2658a93118e2
+    digest: sha256:9f91f78583a16034f111659855cea2ae4b36997adb30072da5176271fe0cc498
+    id: tanzu-buildpacks/dotnet-core-aspnet
+    size: 40966173
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 0.3.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:3d3488ad09da1b618021ff54ea667386fc6278ae22b073683a71cfa39c44975b
+    digest: sha256:2f8e226d030b435db8ab699c17890251dd5695c81558481af20170cbc9148314
+    id: tanzu-buildpacks/dotnet-core-runtime
+    size: 140399205
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 0.3.1
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:cfdfdf36775fd1815fb6ab4037c11a4f27c345f2b9d84b5ce350b5442accf1c3
+    digest: sha256:097c6486dd91f660b4539ae21f84751d99115f59995d9880f613c1d2d810df2f
+    id: tanzu-buildpacks/dotnet-core-sdk
+    size: 417585014
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 0.3.1
+  - api: "0.2"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:5569002b4f126e37c1fbbc483359c5a1583cda826370530930b07be9e62e6800
+    digest: sha256:b4aa880a34802b5596a1ea9b588ce81e61bae90ee9cbbfcc8f92148e204b56d8
+    homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+    id: tanzu-buildpacks/dotnet-core
+    order:
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.1.0
+      - id: tanzu-buildpacks/dotnet-core-runtime
+        version: 0.3.1
+      - id: tanzu-buildpacks/dotnet-core-aspnet
+        optional: true
+        version: 0.3.2
+      - id: tanzu-buildpacks/dotnet-core-sdk
+        version: 0.3.1
+      - id: tanzu-buildpacks/icu
+        optional: true
+        version: 0.0.13
+      - id: tanzu-buildpacks/node-engine
+        optional: true
+        version: 0.8.3
+      - id: tanzu-buildpacks/dotnet-publish
+        version: 0.5.1
+      - id: tanzu-buildpacks/dotnet-execute
+        version: 0.4.1
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.1.0
+      - id: tanzu-buildpacks/dotnet-core-runtime
+        version: 0.3.1
+      - id: tanzu-buildpacks/dotnet-core-aspnet
+        optional: true
+        version: 0.3.2
+      - id: tanzu-buildpacks/dotnet-core-sdk
+        optional: true
+        version: 0.3.1
+      - id: tanzu-buildpacks/icu
+        optional: true
+        version: 0.0.13
+      - id: tanzu-buildpacks/node-engine
+        optional: true
+        version: 0.8.3
+      - id: tanzu-buildpacks/dotnet-execute
+        version: 0.4.1
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.1.0
+      - id: tanzu-buildpacks/icu
+        optional: true
+        version: 0.0.13
+      - id: tanzu-buildpacks/node-engine
+        optional: true
+        version: 0.8.3
+      - id: tanzu-buildpacks/dotnet-execute
+        version: 0.4.1
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+    size: 559
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 1.11.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:de5c3458e5e55eb789c6b823cd50f0ab1228733847aa6622379799560681b7ef
+    digest: sha256:f5e7afce1861e2ef185f469f83e935852a40b4ca2011b9c45b11fad73c84e22d
+    id: tanzu-buildpacks/dotnet-execute
+    size: 2180221
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 0.4.1
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:1f8d6132d7c0270aaa01907793c228dbf94daeb9d03a66b6411acc063ed5beb2
+    digest: sha256:3824adc951ac6d7d5132fd5afa49331b425b0342a34cf2682c126d5edfa4393d
+    id: tanzu-buildpacks/dotnet-publish
+    size: 2213191
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 0.5.1
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:5c58370fdf7f68a8ae4a5efffd02e3ddfadd38e9844101b1d9916d723d98b137
+    digest: sha256:33d2ce9283c76538f0dab2c2bc520e292e10e2e1df45834b1297815830743997
+    homepage: https://github.com/pivotal-cf/tanzu-dynatrace
+    id: tanzu-buildpacks/dynatrace
+    size: 5055993
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.2.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:63e13629f48b5890189e03b290b64009ab95da4b2fdfd48e362b3d7d00911078
+    digest: sha256:f61bb2c6ab290db94618d45c79c5643b59f796c02d24095f152bffa4834baf06
+    homepage: https://github.com/pivotal-cf/tanzu-dynatrace
+    id: tanzu-buildpacks/dynatrace
+    size: 4544568
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:63e13629f48b5890189e03b290b64009ab95da4b2fdfd48e362b3d7d00911078
+    digest: sha256:f61bb2c6ab290db94618d45c79c5643b59f796c02d24095f152bffa4834baf06
+    homepage: https://github.com/pivotal-cf/tanzu-dynatrace
+    id: tanzu-buildpacks/dynatrace
+    size: 4544568
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:63e13629f48b5890189e03b290b64009ab95da4b2fdfd48e362b3d7d00911078
+    digest: sha256:f61bb2c6ab290db94618d45c79c5643b59f796c02d24095f152bffa4834baf06
+    homepage: https://github.com/pivotal-cf/tanzu-dynatrace
+    id: tanzu-buildpacks/dynatrace
+    size: 4544568
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:63e13629f48b5890189e03b290b64009ab95da4b2fdfd48e362b3d7d00911078
+    digest: sha256:f61bb2c6ab290db94618d45c79c5643b59f796c02d24095f152bffa4834baf06
+    homepage: https://github.com/pivotal-cf/tanzu-dynatrace
+    id: tanzu-buildpacks/dynatrace
+    size: 4544568
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 4.0.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:f6747478ee96c8db63bf1449c08239193caf4c2bcfa1dbd3b95f89a7c86572fb
+    digest: sha256:e75871c48f134f4f8c423f1bfe8dab29ccb89bdc220f43c1791959d07e05ede9
+    homepage: https://github.com/pivotal-cf/tanzu-elastic-apm
+    id: tanzu-buildpacks/elastic-apm
+    size: 12199027
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.1.1
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:8187ddaadc85b82e946bd2751cfa0d54b37523fbc61e6d238bef7fd777ec6801
+    digest: sha256:155edd484bc2ec8b0e86f970517f5c243f455693f48e8ec368647e58fd2e8636
+    homepage: https://github.com/pivotal-cf/tanzu-elastic-apm
+    id: tanzu-buildpacks/elastic-apm
+    size: 11356200
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.1.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:5c3d462ef67e9e4321b9af831cfc50561f60fc110ceb4291e61c24b5262d8302
+    digest: sha256:429bca0b662a0647c93384ea36b8949ba7627bd97222399343ee75648f2d1ee2
+    id: tanzu-buildpacks/go-build
+    size: 2244273
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 0.3.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:7a3e9473e60fd43f55ba34c1af29f8679dd2e1f231393abe1a43c30539420ada
+    digest: sha256:8ecdee6b5829467a217bd41d6dfbf582943a4c6e60ec783796089fbeb92f9049
+    id: tanzu-buildpacks/go-dist
+    size: 559876586
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 0.6.6
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:a442e2c6c529d3af783aa0e7f9cdf29183e5f10eebfbb327cb041276012c963f
+    digest: sha256:81e6d1ac644593f8e50252e3982419e48c75462117411056508587c417a45248
+    id: tanzu-buildpacks/go-mod-vendor
+    size: 2105211
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 0.2.3
+  - api: "0.4"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+      id: tanzu-buildpacks/go
+      version: 1.10.5
+    diffId: sha256:41c441c7cb3d50313be0441c136b1b5439738d1e98404586dcbe1655524929da
+    digest: sha256:ec5267c5a337cffdf25263fdb50b5e82c28d6d4cd1bab2e0980ace0aa07bf2ec
+    homepage: https://docs.pivotal.io/tanzu-buildpacks/go/go-buildpack.html
+    id: tanzu-buildpacks/go
+    order:
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.1.0
+      - id: tanzu-buildpacks/go-dist
+        version: 0.6.6
+      - id: tanzu-buildpacks/go-mod-vendor
+        version: 0.2.3
+      - id: tanzu-buildpacks/go-build
+        version: 0.3.2
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.1.0
+      - id: tanzu-buildpacks/go-dist
+        version: 0.6.6
+      - id: tanzu-buildpacks/dep
+        version: 0.1.4
+      - id: tanzu-buildpacks/dep-ensure
+        version: 0.1.3
+      - id: tanzu-buildpacks/go-build
+        version: 0.3.2
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.1.0
+      - id: tanzu-buildpacks/go-dist
+        version: 0.6.6
+      - id: tanzu-buildpacks/go-build
+        version: 0.3.2
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+    size: 508
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:e8761c517c7e52a4f9888330f9c0601f670e856a6cbb5c3706e68c45696fd3d4
+    version: 1.10.5
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:7541b1f60a250e12271ae00f41ef83ff5b6b4eabf623fbcdce5984b0a9537ce8
+    digest: sha256:1920183d6b19ac2a240514dcf64bb8447f36a096b5b06f3fae523e962276b2e7
+    homepage: https://docs.pivotal.io/tanzu-buildpacks/httpd/httpd-buildpack.html
+    id: tanzu-buildpacks/httpd
+    size: 19108862
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+      mixins:
+      - libexpat1
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 0.3.4
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/httpd/httpd-buildpack.html
+      id: tanzu-buildpacks/httpd
+      version: 0.3.4
+    diffId: sha256:7541b1f60a250e12271ae00f41ef83ff5b6b4eabf623fbcdce5984b0a9537ce8
+    digest: sha256:1920183d6b19ac2a240514dcf64bb8447f36a096b5b06f3fae523e962276b2e7
+    homepage: https://docs.pivotal.io/tanzu-buildpacks/httpd/httpd-buildpack.html
+    id: tanzu-buildpacks/httpd
+    size: 19108862
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+      mixins:
+      - libexpat1
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:99cb5ad1360641204edbdcc8d0055595b3026a1a4d9b843d2377b77d40f040f5
+    version: 0.3.4
+  - api: "0.2"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:210b51e669640a42fc4eb30c5933efd81f115e117c2ed1fb12f0ecc8ada561fc
+    digest: sha256:a772023bdd528e5223da48eaf132f3ca67188f67d0ae963167a35516f4c9b769
+    id: tanzu-buildpacks/icu
+    size: 33384925
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 0.0.13
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:89aab8777798f949b8672ad203c29fcac0bfe15930ea88cd03387a91f8a99bef
+    digest: sha256:18e3f8569489bbd9f8a79f2d8c6e0359774b1ca9e69b4a67a66159c20ef6143c
+    homepage: https://github.com/pivotal-cf/tanzu-jacoco
+    id: tanzu-buildpacks/jacoco
+    size: 3605617
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.3.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.11.0
+    diffId: sha256:a5af14491cb65bc9d422186fec549e73dd33c5ec3b2e838802874b2a7cad5475
+    digest: sha256:f3161fe1fa634dc951bcb16ed5380089fdc1eb457a165aaeeed6bbf6cb4f4fca
+    homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+    id: tanzu-buildpacks/java-native-image
+    order:
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 2.4.2
+      - id: paketo-buildpacks/upx
+        optional: true
+        version: 1.1.2
+      - id: paketo-buildpacks/graalvm
+        version: 6.7.0
+      - id: paketo-buildpacks/leiningen
+        optional: true
+        version: 3.5.0
+      - id: paketo-buildpacks/gradle
+        optional: true
+        version: 5.8.0
+      - id: paketo-buildpacks/maven
+        optional: true
+        version: 5.7.0
+      - id: paketo-buildpacks/sbt
+        optional: true
+        version: 5.6.0
+      - id: paketo-buildpacks/executable-jar
+        optional: true
+        version: 5.3.1
+      - id: paketo-buildpacks/spring-boot
+        optional: true
+        version: 4.7.0
+      - id: paketo-buildpacks/native-image
+        version: 4.3.2
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 4.4.1
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 3.2.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 3.2.3
+    size: 1157
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:520d891f921224054b806a5fcd959222b6f6a82529e3be09e202e4169a87e5f8
+    version: 4.11.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:e7533e5e461d5c3283b421a0e9c48cc0b80607588bfd1a56fea2c1a2e6cea509
+    digest: sha256:0f501dd94f52ef410a7ecfd7cd1fa47b1957e66b774b130a33fd81aa268ea919
+    homepage: https://github.com/pivotal-cf/tanzu-java
+    id: tanzu-buildpacks/java
+    order:
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 2.4.2
+      - id: tanzu-buildpacks/snyk
+        optional: true
+        version: 3.2.2
+      - id: paketo-buildpacks/bellsoft-liberica
+        version: 8.9.0
+      - id: paketo-buildpacks/leiningen
+        optional: true
+        version: 3.5.0
+      - id: paketo-buildpacks/clojure-tools
+        optional: true
+        version: 1.1.3
+      - id: paketo-buildpacks/gradle
+        optional: true
+        version: 5.8.0
+      - id: paketo-buildpacks/maven
+        optional: true
+        version: 5.7.0
+      - id: paketo-buildpacks/sbt
+        optional: true
+        version: 6.0.3
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 1.2.0
+      - id: paketo-buildpacks/executable-jar
+        optional: true
+        version: 5.3.1
+      - id: paketo-buildpacks/apache-tomcat
+        optional: true
+        version: 6.4.0
+      - id: paketo-buildpacks/dist-zip
+        optional: true
+        version: 4.3.0
+      - id: paketo-buildpacks/spring-boot
+        optional: true
+        version: 4.7.0
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 4.4.1
+      - id: paketo-buildpacks/azure-application-insights
+        optional: true
+        version: 4.10.0
+      - id: paketo-buildpacks/google-stackdriver
+        optional: true
+        version: 4.0.1
+      - id: tanzu-buildpacks/apache-skywalking
+        optional: true
+        version: 4.1.1
+      - id: tanzu-buildpacks/appdynamics
+        optional: true
+        version: 4.1.3
+      - id: tanzu-buildpacks/aspectj
+        optional: true
+        version: 3.2.2
+      - id: tanzu-buildpacks/checkmarx
+        optional: true
+        version: 3.2.2
+      - id: tanzu-buildpacks/contrast-security
+        optional: true
+        version: 3.14.2
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 3.2.2
+      - id: tanzu-buildpacks/elastic-apm
+        optional: true
+        version: 4.1.1
+      - id: tanzu-buildpacks/jacoco
+        optional: true
+        version: 3.3.0
+      - id: tanzu-buildpacks/jprofiler
+        optional: true
+        version: 3.5.0
+      - id: tanzu-buildpacks/jrebel
+        optional: true
+        version: 3.8.1
+      - id: tanzu-buildpacks/new-relic
+        optional: true
+        version: 4.0.3
+      - id: tanzu-buildpacks/overops
+        optional: true
+        version: 3.11.0
+      - id: tanzu-buildpacks/riverbed
+        optional: true
+        version: 3.4.0
+      - id: tanzu-buildpacks/synopsys
+        optional: true
+        version: 3.2.2
+      - id: tanzu-buildpacks/yourkit
+        optional: true
+        version: 3.7.1
+      - id: paketo-buildpacks/encrypt-at-rest
+        optional: true
+        version: 3.2.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 3.2.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 3.2.3
+    size: 1888
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 5.30.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:fa695088fef7e27fb06037b95a9e104dcb3ff38787e5744afc8860932bb9f00f
+    digest: sha256:63640f70dd3bd32a4dda3893bc4d994da1b867d562f7bedbeced9ed53cd10538
+    homepage: https://github.com/pivotal-cf/tanzu-jprofiler
+    id: tanzu-buildpacks/jprofiler
+    size: 116258207
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.5.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:24bb0eafa4869a1941c9513d709330eebc0c93262be81340bbca14d7b8990b14
+    digest: sha256:90d1dcc7dbad5a9d8ea1bec83140d3e6502493d160d390db6fb646892d035656
+    homepage: https://github.com/pivotal-cf/tanzu-jrebel
+    id: tanzu-buildpacks/jrebel
+    size: 27704294
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.8.1
+  - api: "0.5"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:84079bbb6b86c4b69f682c1efbb2675b171ebfd9da94df96f2cb8197bcc39540
+    digest: sha256:8423af2506c10892f94f8968720f75111a07e9601cbe5f948321853b90d9ff70
+    homepage: https://github.com/pivotal-cf/tanzu-miniconda
+    id: tanzu-buildpacks/miniconda
+    size: 64353730
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 0.1.4
+  - api: "0.7"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:9cbc87e50d6a8bbb32ddd321af392f0fb0af4eb4eaba502151a616abbd2151ca
+    digest: sha256:4d988da0c5781bf51d481cecea0e0aa27aaf4feb8656de2fb4e3dd15bc701c4a
+    homepage: https://github.com/pivotal-cf/tanzu-new-relic
+    id: tanzu-buildpacks/new-relic
+    size: 57185638
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 4.0.3
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:b0e01df7902e2380d0af50a2af08380e1fd7f7e589b365b6c3344d15391a3e74
+    digest: sha256:e63f8402ec00003cdf7cdda51bb91e62247f3b37f423efb5966e558ffe1a89ba
+    homepage: https://github.com/pivotal-cf/tanzu-new-relic
+    id: tanzu-buildpacks/new-relic
+    size: 57178596
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.0.4
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:6065a99ded99d19a4716a6d63ac6cc354ac0536f4cb41fbadaef51e85b30fa37
+    digest: sha256:e804065c2e07ddb442b7a547d097a0aee784882403e68e48e1a27cb7fa8531e8
+    homepage: https://github.com/pivotal-cf/tanzu-new-relic
+    id: tanzu-buildpacks/new-relic
+    size: 57180498
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 4.1.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:8cf84d48e45ab23e4e98933263e3a74c92eedc64f72477ef26dbe85f0f9f7f73
+    digest: sha256:9554b79e2ddd0258c8570da9390897c2a652430572e233e32a927addc986db3c
+    homepage: https://docs.pivotal.io/tanzu-buildpacks/nginx/nginx-buildpack.html
+    id: tanzu-buildpacks/nginx
+    size: 15811503
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 0.4.4
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nginx/nginx-buildpack.html
+      id: tanzu-buildpacks/nginx
+      version: 0.4.4
+    diffId: sha256:8cf84d48e45ab23e4e98933263e3a74c92eedc64f72477ef26dbe85f0f9f7f73
+    digest: sha256:9554b79e2ddd0258c8570da9390897c2a652430572e233e32a927addc986db3c
+    homepage: https://docs.pivotal.io/tanzu-buildpacks/nginx/nginx-buildpack.html
+    id: tanzu-buildpacks/nginx
+    size: 15811503
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:fc02c0f92a5e8ae0c56c53f11f7b7836d7825a53e09432a9855c151055087912
+    version: 0.4.4
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:731ae692babe95d7adab0284032d2c1a5f80dac431601a2ed59a0c27fa898b3a
+    digest: sha256:274260be969b4b94a027a707629be523b2a8b82f9883dc01866ecfc67f7fdf10
+    id: tanzu-buildpacks/node-engine
+    size: 188907838
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.8.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/dotnet-core/dotnet-core-buildpack.html
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.11.2
+    diffId: sha256:731ae692babe95d7adab0284032d2c1a5f80dac431601a2ed59a0c27fa898b3a
+    digest: sha256:274260be969b4b94a027a707629be523b2a8b82f9883dc01866ecfc67f7fdf10
+    id: tanzu-buildpacks/node-engine
+    size: 188907838
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:518a00d18bd25cffcbbc68cbc749aa696c8725d31c4b4c23cc98efa3928dd6f6
+    version: 0.8.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:effc7b6be33f0b62084b3853e3571e0b320396fd387ee96ff348804435581ebd
+    digest: sha256:153d51eea75fb933e411ae220b57fcff10db697cdbbf6dba47f55e726081350a
+    id: tanzu-buildpacks/node-module-bom
+    size: 3527841
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.1.4
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:2bad289057b4181c4aa56fa5e4ff2096879c9c0f0c865169aae962574735c7fb
+    digest: sha256:07299e770d787374018a1cc3225ee3bec80cb3db54cfb7fd9cbad1ac1298d0b1
+    id: tanzu-buildpacks/node-run-script
+    size: 2088281
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.2.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:5763ae09653324c477cb1823839ebf0d98be748976da42c2e171323fa76addac
+    digest: sha256:1d7b46a9e98520a3ef8eaa59ae0565be4a04441b17427dddf1abc9d6d4bb956b
+    id: tanzu-buildpacks/node-start
+    size: 2057478
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.3.3
+  - api: "0.4"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:48f51298e960708827c8cb20d39cfcba8a1565b10f9a90db797d731f995ac4d9
+    digest: sha256:dc926edb869e3dc0b0a4385251e701b5e65368dda16c8da38725e3a38308cf2c
+    homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+    id: tanzu-buildpacks/nodejs
+    order:
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.0.2
+      - id: tanzu-buildpacks/snyk
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/node-engine
+        version: 0.8.3
+      - id: tanzu-buildpacks/yarn
+        version: 0.3.3
+      - id: tanzu-buildpacks/yarn-install
+        version: 0.3.2
+      - id: tanzu-buildpacks/node-module-bom
+        optional: true
+        version: 0.1.4
+      - id: tanzu-buildpacks/node-run-script
+        optional: true
+        version: 0.2.2
+      - id: tanzu-buildpacks/yarn-start
+        version: 0.2.3
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.1
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/appdynamics
+        optional: true
+        version: 4.1.4
+      - id: tanzu-buildpacks/contrast-security
+        optional: true
+        version: 4.1.1
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/elastic-apm
+        optional: true
+        version: 4.1.3
+      - id: tanzu-buildpacks/new-relic
+        optional: true
+        version: 4.0.4
+      - id: tanzu-buildpacks/synopsys
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.0.2
+      - id: tanzu-buildpacks/snyk
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/node-engine
+        version: 0.8.3
+      - id: tanzu-buildpacks/npm-install
+        version: 0.5.3
+      - id: tanzu-buildpacks/node-module-bom
+        optional: true
+        version: 0.1.4
+      - id: tanzu-buildpacks/node-run-script
+        optional: true
+        version: 0.2.2
+      - id: tanzu-buildpacks/npm-start
+        version: 0.2.3
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.1
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/appdynamics
+        optional: true
+        version: 4.1.4
+      - id: tanzu-buildpacks/contrast-security
+        optional: true
+        version: 4.1.1
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/elastic-apm
+        optional: true
+        version: 4.1.3
+      - id: tanzu-buildpacks/new-relic
+        optional: true
+        version: 4.0.4
+      - id: tanzu-buildpacks/synopsys
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.0.2
+      - id: tanzu-buildpacks/snyk
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/node-engine
+        version: 0.8.3
+      - id: tanzu-buildpacks/node-module-bom
+        optional: true
+        version: 0.1.4
+      - id: tanzu-buildpacks/node-start
+        version: 0.3.3
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.1
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/appdynamics
+        optional: true
+        version: 4.1.4
+      - id: tanzu-buildpacks/contrast-security
+        optional: true
+        version: 4.1.1
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/elastic-apm
+        optional: true
+        version: 4.1.3
+      - id: tanzu-buildpacks/new-relic
+        optional: true
+        version: 4.0.4
+      - id: tanzu-buildpacks/synopsys
+        optional: true
+        version: 4.0.2
+    size: 650
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 1.13.5
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:ddb1d02690d25c6cb86557ab19bf953931a61dcaa0bce8a9aea5da930b8f7c2e
+    digest: sha256:247b83d43d6524adf00d6465f80c14cfe21b9b031cba0d1b0557befcfd16ef54
+    id: tanzu-buildpacks/npm-install
+    size: 2127730
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.5.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:9a5b6471c2a6c31c03e7be65813246fd70055424082e6bd45a6983ae028132d3
+    digest: sha256:4c152492af2fac7be0b73c28525ad6a4524941fafd6db4a86ba64051794b5f4f
+    id: tanzu-buildpacks/npm-start
+    size: 2061901
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.2.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:196f9ec54c30f03d4bd6e111dd9e8acdc05fe8461281fccdf0c392c2c2112ad0
+    digest: sha256:fe7a72145761dc21545b323ede6e4546c9e23c3757d2876367a0fff5320fdca5
+    homepage: https://github.com/pivotal-cf/tanzu-overops
+    id: tanzu-buildpacks/overops
+    size: 52074681
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.11.0
+  - api: "0.4"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:b854562c5217af0e9f53e56a9217590852b20e6fee6b020622193dc9e9bd6a86
+    digest: sha256:83b4655871dc90489d89856ae1f26bf5db0da6d2c505b802345596ad9ff2da3e
+    id: tanzu-buildpacks/php-composer
+    size: 5565624
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 0.1.10
+  - api: "0.4"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:47558a180d5175017b605f14f1cd72b66f331414d80224641cc5d7698f27b1d9
+    digest: sha256:df1ebb37b8779ca32f4137b61264c90d26e4323d6d8c57717cead9756141f554
+    id: tanzu-buildpacks/php-dist
+    size: 458190018
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+      mixins:
+      - libargon2-0
+      - libcurl4
+      - libgd3
+      - libmagickwand-6.q16-3
+      - libonig4
+      - libxml2
+      - libyaml-0-2
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 0.3.3
+  - api: "0.4"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:e97f7ab7ea5ddbe65842a80cd9037e7bec47133b79e70c0db854e390c831409e
+    digest: sha256:38f7715f37aae600b382367daf921ae934799bfd1368a4373590fd0cf7cb652a
+    id: tanzu-buildpacks/php-web
+    size: 6825790
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 0.1.4
+  - api: "0.4"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+      id: tanzu-buildpacks/php
+      version: 0.7.9
+    diffId: sha256:e644b214cac2a6b156e20ebe896f9d81ff703cedb7d32f96275ced1dd05e691d
+    digest: sha256:19f0c84d438495f95a8c963c5453f757463794797b9ab6a480663e1edeadd376
+    homepage: https://docs.pivotal.io/tanzu-buildpacks/php/php-buildpack.html
+    id: tanzu-buildpacks/php
+    order:
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: tanzu-buildpacks/httpd
+        optional: true
+        version: 0.3.4
+      - id: tanzu-buildpacks/nginx
+        optional: true
+        version: 0.4.4
+      - id: tanzu-buildpacks/php-dist
+        version: 0.3.3
+      - id: tanzu-buildpacks/php-composer
+        optional: true
+        version: 0.1.10
+      - id: tanzu-buildpacks/php-web
+        version: 0.1.4
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.2
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/appdynamics
+        optional: true
+        version: 4.2.0
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 4.0.2
+      - id: tanzu-buildpacks/new-relic
+        optional: true
+        version: 4.1.0
+    size: 506
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:329aec191b04e2ddcb5a1959ca33f69055c15ac3d7e334353e9914ff9c97a823
+    version: 0.7.9
+  - api: "0.5"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:97022b18fbe885a40bd0c3d922bbb2f21ceb4b77d62cd95fee833533ada1fbb0
+    digest: sha256:27f7cd855fdd035a35ecc79310a308904f49bd0a0009e549aebdb50bee21d761
+    homepage: https://github.com/pivotal-cf/tanzu-pip-install
+    id: tanzu-buildpacks/pip-install
+    size: 2102740
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 0.2.2
+  - api: "0.5"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:b07b27cb69496317d8ead4449906c4420e1a5e5581238b52070db1f21a0d4d89
+    digest: sha256:1903609fd528e5bf291989a2980da0d9323a24851e14ca7225a5ba1a61854dbb
+    homepage: https://github.com/pivotal-cf/tanzu-pip
+    id: tanzu-buildpacks/pip
+    size: 14678495
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 0.6.3
+  - api: "0.5"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:bffbb87ef30ad18d6904597f0145e3829db65f099ae6f4719ff09c2712e4da9a
+    digest: sha256:864331ad2ce32292b12068ab080421a231d8367a13f9ad8bf3385b0574509dc8
+    homepage: https://github.com/pivotal-cf/tanzu-pipenv-install
+    id: tanzu-buildpacks/pipenv-install
+    size: 2149972
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 0.1.6
+  - api: "0.5"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:831b3bb752d6292661510a4b46cf6f1ffe51fb61c545d3ebaa1cfaaada59414b
+    digest: sha256:af02fed9fddbf5f899c27c69210ac6fbbce63ea8df78b3871589a690b8afa5f8
+    homepage: https://github.com/pivotal-cf/tanzu-pipenv
+    id: tanzu-buildpacks/pipenv
+    size: 42133899
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 0.2.4
+  - api: "0.6"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:9a77459f8eb8117717f0173257d944a6d1b400ae6c9d2d44cd076a74a3439176
+    digest: sha256:e6a5eef34abe1003f641f9f055f7c30edc3aee7f73c6e275b6f6fa9c9875187e
+    homepage: https://github.com/pivotal-cf/tanzu-python-start
+    id: tanzu-buildpacks/python-start
+    size: 2057478
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 0.4.2
+  - api: "0.5"
+    buildpackage:
+      id: tanzu-buildpacks/python
+      version: 1.1.4
+    diffId: sha256:4ae59040e5bfbdec5bed71b8aacf4c2f77650bc6becfd09e453ff1f34e94d9e4
+    digest: sha256:e67c37e983c0577d6cd345717fdd25fb641c6257f0fa59dbefc7e5f067c6915c
+    id: tanzu-buildpacks/python
+    order:
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.0.2
+      - id: tanzu-buildpacks/cpython
+        version: 0.2.0
+      - id: tanzu-buildpacks/pip
+        version: 0.6.3
+      - id: tanzu-buildpacks/pipenv
+        version: 0.2.4
+      - id: tanzu-buildpacks/pipenv-install
+        version: 0.1.6
+      - id: tanzu-buildpacks/python-start
+        version: 0.4.2
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.1
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.0.2
+      - id: tanzu-buildpacks/cpython
+        version: 0.2.0
+      - id: tanzu-buildpacks/pip
+        version: 0.6.3
+      - id: tanzu-buildpacks/pip-install
+        version: 0.2.2
+      - id: tanzu-buildpacks/python-start
+        version: 0.4.2
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.1
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.0.2
+      - id: tanzu-buildpacks/miniconda
+        version: 0.1.4
+      - id: tanzu-buildpacks/conda-env-update
+        version: 0.1.4
+      - id: tanzu-buildpacks/python-start
+        version: 0.4.2
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.1
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 3.0.2
+      - id: paketo-buildpacks/watchexec
+        optional: true
+        version: 2.0.2
+      - id: tanzu-buildpacks/cpython
+        version: 0.2.0
+      - id: tanzu-buildpacks/python-start
+        version: 0.4.2
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 5.0.2
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 4.0.1
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 4.0.2
+    size: 499
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:eba4f22bf40a00594a469827bc615687eda07ba9f65fb72a396f8748648dc99f
+    version: 1.1.4
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:0bc9ac9d93ecff84d7687756dcb153a85579036ea0a7a956cc50c17503fcf299
+    digest: sha256:f80806496061ddd5a01b92e5a9aabc468d5a10b4206c01d6d351303248a7d52d
+    homepage: https://github.com/pivotal-cf/tanzu-riverbed
+    id: tanzu-buildpacks/riverbed
+    size: 21353707
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.4.0
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:11d21399a0f7bc64986af26ffb56d7717df3323a5d215ffbbc35da75ec2d3dd4
+    digest: sha256:829f9787ba311bf4ffa9270ee04655fc090512ea072f38fd65000d4a13b1fc57
+    homepage: https://github.com/pivotal-cf/tanzu-snyk
+    id: tanzu-buildpacks/snyk
+    size: 2520528
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.2.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:c125d7a398a794c1d956f0f9a66745099ab6a99e7ccd0526aceef9f76e4ea3f3
+    digest: sha256:06d5cf045eaeef62537f7d43d3ee5364207881fd2067c3e6dfde9bffd0dbbaa9
+    homepage: https://github.com/pivotal-cf/tanzu-snyk
+    id: tanzu-buildpacks/snyk
+    size: 2254224
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.0.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:da108804209ce3510588289c249a128b2045133d5035252871b7fb4a9ec4ed40
+    digest: sha256:0b6ee8feb0f09682dd28c9f5ce226c2bd3aa1b42265ed376eb87f292dbf87db1
+    homepage: https://github.com/pivotal-cf/tanzu-synopsys
+    id: tanzu-buildpacks/synopsys
+    size: 3517946
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.2.2
+  - api: "0.7"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:ea5ad529ea0ec02a7b7712c359e641fc48210d31351ffefc767805a24bf0ede6
+    digest: sha256:ca2568b138857e89bd48133cd44fa1796627ebb94ede6d4a5271d53fb3e618e3
+    homepage: https://github.com/pivotal-cf/tanzu-synopsys
+    id: tanzu-buildpacks/synopsys
+    size: 3168584
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 4.0.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:2adb61e25015426e9c12d672dbc2b7cf413a80e14c1501f957f64cf61364beda
+    digest: sha256:fb5a3fa2bad5097e5b6a2f95aafab50b2add2b2038af269fd611a5fcb7c1698f
+    id: tanzu-buildpacks/yarn-install
+    size: 2118644
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.3.2
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:b435d74c0f91d9944c44648e55353f26fc892fc8989b2a8ed1c6ffbf0b70fb29
+    digest: sha256:21eb4c4f94d521a39d2e75560242cd0ece90e8b078a1ea92f56afa9927891c1a
+    id: tanzu-buildpacks/yarn-start
+    size: 2061893
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.2.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://docs.pivotal.io/tanzu-buildpacks/nodejs/nodejs-buildpack.html
+      id: tanzu-buildpacks/nodejs
+      version: 1.13.5
+    diffId: sha256:f28c856e18f6da419045a12a21c6cb684057743992a32063a61940b8d68bb27c
+    digest: sha256:e6385c5030ace42f7357239fed72ecab37b5602d412cd9862421d81092ce7230
+    id: tanzu-buildpacks/yarn
+    size: 5526170
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:3b0f5c14f24724109e40605e5eaade0c29eb9136ae4515cf0f7bb3b6e991c464
+    version: 0.3.3
+  - api: "0.6"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.30.0
+    diffId: sha256:a45bc54f003c56a76a2118f63889171c120e8c92bd0b0ccd078695d294dd78ba
+    digest: sha256:12584526e0a71da07114dd0e8334c09d028aec50dfea8f3d67581ef55cb76f45
+    homepage: https://github.com/pivotal-cf/tanzu-yourkit
+    id: tanzu-buildpacks/yourkit
+    size: 9125084
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: '*'
+    storeImage:
+      image: harbor.withtanzu.com/lzetea/tbs@sha256:7aa4a8f59f8cc253fd9830af92755c9b893c416eb95b3d7c1e0e766efb9a55f8
+    version: 3.7.1
+  conditions:
+  - lastTransitionTime: "2022-02-08T16:24:57Z"
+    status: "True"
+    type: Ready
+  observedGeneration: 1

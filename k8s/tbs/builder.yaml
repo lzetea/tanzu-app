@@ -1,7 +1,7 @@
 apiVersion: kpack.io/v1alpha1
 kind: Builder
 metadata:
-  name: default-builder
+  name: custom-builder
   namespace: tanzu-app
 spec:
   serviceAccount: tanzu-app-service-account
@@ -15,3 +15,5 @@ spec:
   order:
   - group:
     - id: tanzu-buildpacks/java
+  - group:
+    - id: ghcr.io/alexandreroman/cve-2021-44228-workaround-buildpack
