@@ -58,15 +58,15 @@ spec:
           - name: SPRING_DATASOURCE_USERNAME
             valueFrom:
               secretKeyRef:
-                name: tanzu-app
+                name: tanzu-app-db
                 key: datasource-username
           - name: SPRING_DATASOURCE_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: tanzu-app
+                name: tanzu-app-db
                 key: datasource-password
           - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_APITOKEN
             valueFrom:
               secretKeyRef:
-                name: tanzu-app
+                name: tanzu-app-obs
                 key: wavefront-api-token
