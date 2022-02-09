@@ -36,5 +36,5 @@ management:
 
 wavefront:
   application:
-    name: tanzu-app
-    service: tanzu-app-vote
+    name: lze-tanzu-app
+    service: lze-tanzu-app-vote
